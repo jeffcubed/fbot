@@ -48,7 +48,7 @@ module.exports = ((main) => {
       });
 
     }),
-    description: "Adds the ifunny logo to the given argument",
+    description: "Add a goldstar to the given argument",
     args: "(URL | Attachment | @user)",
     category: "Fun",
     cooldown: 1000 * 5
