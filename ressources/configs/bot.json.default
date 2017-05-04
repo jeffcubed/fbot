@@ -1,0 +1,27 @@
+{
+  "token": "",
+
+  "autorun": true,
+  "cacheLimit": 0,
+  "botName": "fbot",
+  "commandPrefix": "f!",
+
+  "botAdmins": [""],
+  "logChannel": "",
+
+  "db": {
+    "host": "localhost",
+    "port": 5432,
+    "db": "fbot",
+    "user": "postgres",
+    "password": "",
+    "idleTimeout": 30000,
+    "pool": {
+      "maxClients": 10
+    }
+  },
+
+  "messages": {
+    "serverJoinMessage": "ayup, im **{{BOTNAME}}**\nim your personal slave now\nif you want to know what commands i listen to, type **{{COMMAND_HELP}}**"
+  }
+}

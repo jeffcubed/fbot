@@ -1,0 +1,12 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 8
+    },
+    "ecmaFeatures": {
+        "impliedStrict": true,
+        "globalReturn": true
+    },
+    "env": {
+        "node": true
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="/">
+
+    <title>fbot &middot; Settings</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <div class="header">
+
+        <a href="/" class="hidden-sm-down col-md-3 logo"></a>
+        <a href="/" class="hidden-md-up col-xs-3 logo-small"></a>
+
+      </div>
+
+      <div class="content">
+
+        <div class="text-xs-center">
+
+          <h3>Settings</h3><br />
+
+          <div class="col-xs-12">
+            <p>To reset any setting, use <code>f!setting clear (name)</code>, like this:<br /><code>f!setting clear joinMessage</code></p>
+            <hr />
+
+            <h5>joinMessage (message)</h5>
+            <span>The message that is sent when a user joins the server</span><br />
+            <small>Example: <code><%= main.cfg.commandPrefix %>setting set joinMessage Hey, {{MENTION}}! Welcome to {{SERVERNAME}}</code></small><br />
+            <small>Available placeholders: <code>{{MENTION}}</code>, <code>{{USERNAME}}</code>, <code>{{DISCRIMINATOR}}</code>, <code>{{SERVERNAME}}</code></small>
+            <hr />
+
+            <h5>leaveMessage (message)</h5>
+            <span>The message that is sent when a user leaves the server</span><br />
+            <small>Example: <code><%= main.cfg.commandPrefix %>setting set leaveMessage Bye, **{{USERNAME}}#{{DISCRIMINATOR}}**!</code></small><br />
+            <small>Available placeholders: <code>{{MENTION}}</code>, <code>{{USERNAME}}</code>, <code>{{DISCRIMINATOR}}</code>, <code>{{SERVERNAME}}</code></small><br />
+            <small><b>Note:</b> Using mentions here is discouraged, because discord replaces left user's mentions with <code>@invalid-user</code></small>
+            <hr />
+
+            <h5>messageChannel (#channel)</h5>
+            <span>The channel that join and leave messages get sent to</span><br />
+            <small>Example: <code><%= main.cfg.commandPrefix %>setting set messageChannel #general</code></small><br />
+            <small>Defaults to the server's initial <code>#general</code> channel</small>
+            <hr />
+
+            <h5>optOutOfAI (true/false)</h5>
+            <span>Disables or enables the logging of specific messages for the <code><%= main.cfg.commandPrefix %>ai</code> command</span><br />
+            <small>Example: <code><%= main.cfg.commandPrefix %>setting set optOutOfAI true</code></small><br />
+            <small>Defaults to <code>false</code> (Not opt'ed out)</small>
+            <hr />
+
+            <h5>disableAutoreact (true/false)</h5>
+            <span>Disables or enables the bot's auto reaction to specific messages</span><br />
+            <small>Example: <code><%= main.cfg.commandPrefix %>setting set disableAutoreact true</code></small><br />
+            <small>Defaults to <code>false</code> (Not disabled)</small>
+            <hr />
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer text-xs-center">
+      Copyright &copy; 2017 <a href="https://twitter.com/xmatmen">matmen</a>
+    </div>
+
+  </body>
+
+</html>

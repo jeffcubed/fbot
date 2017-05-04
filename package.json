@@ -1,0 +1,35 @@
+{
+  "name": "fbot",
+  "version": "1.0.0",
+  "description": "Another useless discord bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/menchez/fbot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "fbot"
+  ],
+  "author": "matmen",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://gitlab.com/menchez/fbot/issues"
+  },
+  "homepage": "https://gitlab.com/menchez/fbot#README",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "discord.js": "^11.0.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "humanize-duration": "^3.10.0",
+    "jimp": "^0.2.27",
+    "pg": "^6.1.2",
+    "request": "^2.79.0",
+    "speedtest-net": "^1.2.12"
+  }
+}

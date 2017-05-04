@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="/">
+
+    <title>fbot &middot; Stats</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <style>
+    .canvasDiv {
+      height: 35vh;
+    }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <div class="header">
+
+        <a href="/" class="hidden-sm-down col-md-3 logo"></a>
+        <a href="/" class="hidden-md-up col-xs-3 logo-small"></a>
+
+      </div>
+
+      <div class="content">
+
+        <div class="text-xs-center">
+
+          <h3>Stats</h3>
+          <small>Graphs are updated every hour &middot; Showing last month's stats</small><hr />
+
+          <div class="row">
+            <div class="col-xs-4">
+              <h3>Servers</h3>
+              <h5><%= main.bot.guilds.size %></h5>
+            </div>
+
+            <div class="col-xs-4">
+              <h3>Users</h3>
+
+              <%
+              let allUsers = 0;
+
+              for(let guild of main.bot.guilds.values()) {
+                allUsers += guild.memberCount;
+              }
+              %>
+
+              <h5><%= allUsers %></h5>
+            </div>
+
+            <div class="col-xs-4">
+              <h3>Users Online</h3>
+
+              <%
+              let onlineUsers = 0;
+
+              for(guild of main.bot.guilds.values()) {
+                for(presence of guild.presences.values()) {
+                  if(presence.status !== 'offline') onlineUsers++;
+                }
+              }
+              %>
+
+              <h5><%= onlineUsers %></h5>
+            </div>
+          </div><hr />
+
+          <div class="canvasDiv">
+            <canvas id="serversCanvas"></canvas>
+          </div><hr />
+
+          <div class="canvasDiv">
+            <canvas id="usersCanvas"></canvas>
+          </div><hr />
+
+          <div class="row">
+            <div class="col-xs-6 canvasDiv">
+              <canvas id="messagesCanvas"></canvas>
+            </div>
+            <div class="col-xs-6 canvasDiv">
+              <canvas id="commandsCanvas"></canvas>
+            </div>
+          </div><hr />
+
+          <div class="canvasDiv">
+            <canvas id="commandsPerHundredMessagesCanvas"></canvas>
+          </div><hr />
+
+          <div class="canvasDiv">
+            <canvas id="databaseSize"></canvas>
+          </div><hr />
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer text-xs-center">
+      Copyright &copy; 2017 <a href="https://twitter.com/xmatmen">matmen</a>
+    </div>
+
+    <script src="/js/Chart.bundle.min.js"></script>
+    <script src="/js/stats.js"></script>
+
+  </body>
+
+</html>

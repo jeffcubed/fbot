@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="/">
+
+    <title>fbot</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <div class="header">
+
+        <a href="/" class="hidden-sm-down col-md-3 logo"></a>
+        <a href="/" class="hidden-md-up col-xs-3 logo-small"></a>
+
+      </div>
+
+      <div class="content">
+
+        <div class="text-xs-center">
+
+          <h3>fbot</h3><br />
+          <span><strong>fbot</strong> is yet another, really unnecessary bot for discord</span><br />
+          <span>check out the help pages to learn more</span><hr />
+
+          <a class="btn btn-info" href="/commands">help/commands</a>
+          <a class="btn btn-info" href="/settings">help/settings</a>
+          <a class="btn btn-info" href="/planned">help/planned features</a><br /><hr />
+
+          <a class="btn btn-info" href="https://twitter.com/fbot_updates">twitter/fbot_updates<br />(Bot Updates)</a>
+          <a class="btn btn-info" href="https://twitter.com/dc_fbot">twitter/dc_fbot<br />(AI / User Tweets)</a><br />
+          <a class="btn btn-info" href="/stats">fbot/stats</a><br /><hr />
+
+          <a class="btn btn-success" href="http://bit.ly/add-fbot" target="_blank">discord/invite</a>
+          <a class="btn btn-success" href="https://discord.gg/aRt6zMU" target="_blank">discord/dev server</a><br /><hr />
+
+          <blockquote class="blockquote bq-warning">
+            <p class="bq-title">hey this is kind of important</p>
+            <p>The bot logs certain messages for the <code><%= main.cfg.commandPrefix %>ai</code> command. It tries to filter out any sensitive data, like email addresses or passwords, but please don't send them in any channels the bot has access to (You're better off using direct messages anyway, if you <b>really</b> have to send such information. You shouldn't, however. I mean, it's your data). Server owners can turn this off by changing the <code>optOutOfAI</code> setting.</p>
+        </blockquote>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer text-xs-center">
+      Copyright &copy; 2017 <a href="https://twitter.com/xmatmen">matmen</a>
+    </div>
+
+  </body>
+
+</html>
